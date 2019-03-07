@@ -40,16 +40,16 @@ module CsvDiff
   end
 end
 
-diff = CsvDiff::Detector.new.call('./prices_old.csv', './prices.csv')
-
-p diff
-
-diff.each do |item|
-  if item[:old]
-    puts "OLD: id=#{item[:old][0]} variant_id=#{item[:old][1]} price=#{item[:old][3]}"
-  end
-  if item[:new]
-    puts "NEW: id=#{item[:new][0]} variant_id=#{item[:new][1]} price=#{item[:new][3]}"
-  end
-  puts
-end
+# diff = CsvDiff::Detector.new.call('./prices_old.csv', './prices.csv')
+#
+# p diff
+#
+# diff.each do |item|
+#   if item[:old]
+#     puts "OLD: id=#{item[:old][0]} variant_id=#{item[:old][1]} price=#{item[:old][3]}"
+#   end
+#   if item[:new]
+#     puts "NEW: id=#{item[:new][0]} variant_id=#{item[:new][1]} price=#{item[:new][3]}"
+#   end
+#   puts
+# end
