@@ -1,16 +1,6 @@
 # CsvDiff
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/csv_diff`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-```ruby
-diff = CsvDiff::Detector.new.call('./file_old.csv', './file_new.csv')
-
-diff.each do |item|
-  puts "OLD: id=#{item[:old]}" if item[:old]
-  puts "NEW: id=#{item[:new]}" if item[:new]
-  puts
-end
-```
+Simple gem based on diffy for getting diff across two different csv files
 
 ## Installation
 
@@ -30,7 +20,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+diff = CsvDiff::Detector.new.call('./file_old.csv', './file_new.csv')
+# => returns array of hash objects with `old` and `new` changes
+
+diff.each do |item|
+  puts "OLD: id=#{item[:old]}" if item[:old]
+  puts "NEW: id=#{item[:new]}" if item[:new]
+  puts
+end
+```
 
 ## Development
 
@@ -40,7 +39,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/csv_diff. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/davydovanton/csv_diff. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
